@@ -1,0 +1,23 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Project specific
+output_evidence/
+models/
+*.mp4
+*.jpg
+*.json
+!README.md
+!technical_report.md
+
+# Web
+apps/web/node_modules/
+apps/web/dist/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

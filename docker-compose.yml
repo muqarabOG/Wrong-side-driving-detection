@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  api:
+    build: ./apps/api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./output_evidence:/output_evidence
+    environment:
+      - EVIDENCE_DIR=/output_evidence
+
+  web:
+    build: ./apps/web
+    ports:
+      - "80:80"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - api
